@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script:wght@700&family=Edu+SA+Beginner&family=Libre+Baskerville&family=Tektur&display=swap');
+body{
+    background-color: aliceblue;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-size: 1.2rem;
+    font-family: 'Edu SA Beginner', cursive;
+}
+nav ul li{
+    padding: 0 12px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 55px;
+    background-color: #F6F4EB;
+}
+.brand img{
+    width: 38px;
+    padding: 0 8px;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+.bottom{
+    height: 100px;
+    background-color: #F6F4EB;
+    position:sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icons{
+    margin-top: 20px;
+}
+.icons i{
+    cursor: pointer;
+}
+.container{
+    font-family: 'Edu SA Beginner', cursive;
+    min-height: 75vh;
+    background-color: black;
+    color: #F4F2DE;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border: 10px #F6F4EB;
+    border-radius: 10px;
+    padding: 20px;
+    background-image: url("./pictures/photo-1616356607338-fd87169ecf1a.jpeg");
+}
+#myProgressBar{
+    width: 80vw;
+    cursor: pointer;
+}
+.songItem img{
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 20px;
+    width: 40px;
+}
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: #F5F5F5;
+    width: 40%;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    border-radius: 23px;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+.songListPlay{
+    margin-left: 10px;
+}
+span i{
+    margin-left: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.songContainer{
+    margin-top: 20px;
+}
+.songInfo{
+    margin-top: 20px;
+    position: absolute;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 30px;
+}
+.songInfo img{
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}

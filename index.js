@@ -1,18 +1,18 @@
 let songIndex=0;
 let progress;
-let audioN=new Audio("./songs/1.mp3");
+let audioN=new Audio("1.mp3");
 let masterPlay=document.getElementById("masterPlay");
 var myProgressBar=document.getElementById("myProgressBar");
 var a;
 let song=[
-    {songName:"Yaara", filePath: "./songs/1.mp3",coverPath :"covers/1.jpg"},
-    {songName:"Let Me Down Slowly", filePath: "./songs/2.mp3",coverPath :"covers/2.jpg"},
-    {songName:"Love Me Like You Do", filePath: "./songs/3.mp3",coverPath :"covers/3.jpg"},
-    {songName:"Man Mera", filePath: "./songs/4.mp3",coverPath :"covers/4.jpg"},
-    {songName:"Ishq Bulawa", filePath: "./songs/5.mp3",coverPath :"covers/5.jpg"},
-    {songName:"Jeena Jeena", filePath: "./songs/6.mp3",coverPath :"covers/6.jpg"},
-    {songName:"Apna Bana Le", filePath: "./songs/7.mp3",coverPath :"covers/7.jpg"},
-    {songName:"Kyun Dhunde", filePath: "./songs/8.mp3",coverPath :"covers/8.jpg"}
+    {songName:"Yaara", filePath: "1.mp3",coverPath :"covers/1.jpg"},
+    {songName:"Let Me Down Slowly", filePath: "2.mp3",coverPath :"covers/2.jpg"},
+    {songName:"Love Me Like You Do", filePath: "3.mp3",coverPath :"covers/3.jpg"},
+    {songName:"Man Mera", filePath: "4.mp3",coverPath :"covers/4.jpg"},
+    {songName:"Ishq Bulawa", filePath: "5.mp3",coverPath :"covers/5.jpg"},
+    {songName:"Jeena Jeena", filePath: "6.mp3",coverPath :"covers/6.jpg"},
+    {songName:"Apna Bana Le", filePath: "7.mp3",coverPath :"covers/7.jpg"},
+    {songName:"Kyun Dhunde", filePath: "8.mp3",coverPath :"covers/8.jpg"}
 ];
 masterPlay.addEventListener("click",function(){
     if(audioN.paused || audioN.currentTime<=0){    
@@ -49,7 +49,7 @@ $(".playSong").click(function(){
         a.removeClass("fa-play-circle");
         a.addClass("fa-pause-circle");
         songIndex=$(a).attr("id");
-        audioN.src="./songs/"+songIndex+".mp3";
+        audioN.src=songIndex+".mp3";
         audioN.currentTime=0;
         audioN.play();
         masterPlay.classList.add("fa-pause-circle");
@@ -68,7 +68,7 @@ $(".playSong").click(function(){
 $("#next").click(function(){
     if(songIndex>=8)songIndex=1;
     else songIndex=Number(songIndex)+1;
-    audioN.src="./songs/"+songIndex+".mp3";
+    audioN.src=songIndex+".mp3";
     audioN.currentTime=0;
     audioN.play();
     masterPlay.classList.add("fa-pause-circle");
@@ -79,7 +79,7 @@ $("#next").click(function(){
 $("#previous").click(function(){
     if(songIndex<=1)songIndex=8;
     else songIndex=Number(songIndex)-1;
-    audioN.src="./songs/"+songIndex+".mp3";
+    audioN.src=songIndex+".mp3";
     audioN.currentTime=0;
     audioN.play();
     masterPlay.classList.add("fa-pause-circle");
